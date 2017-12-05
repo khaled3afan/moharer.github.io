@@ -1,0 +1,76 @@
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+}
+input, button, textarea{
+	outline:none;
+}
+P{
+  	padding:10px ;
+	color:#666;
+}
+
+.ar{
+	background:#aaa;
+	margin:10px auto;
+	display:block;
+}
+.en{
+	background:#555;
+	color:#fff;
+	padding:10px 5px;
+	direction:ltr;
+	margin:10px auto;
+	max-height:150px;
+	overflow:scroll;
+	display:block;
+}
+.contain{
+	position:relative;
+	width:95%;
+	margin:20px auto;
+	border:1px solid #222;
+	border-top:3px solid #CF5C56;
+}
+.contain:focus{
+	outline:1px solid #CAD43C;
+	border:none;
+	border-top:3px solid #D6C05E;
+}
+.control{
+	position:absolute;
+	right:0px;
+	top:0px;
+	background:#E5936A;
+	width:100%;
+	padding:10px;
+}
+.control .btn{
+	padding:5px 7px;
+	margin-bottom:5px;
+	min-width:50px;
+}
+
+
+#editor{	
+	padding:10px;
+	background:#fff;
+	width:100%;
+	min-height:200px;
+	resize:vertical;
+	overflow:auto;
+	margin-top:90px;
+}
+
+blockquote{
+	border-left:none;
+	margin-right:20px;
+	margin-left:5px;
+	padding:10px 10px 15px;
+	border-right:5px solid rgba(255,0,0,.5);
+	background: rgba(244,244,244,.7);
+	border-radius:5px;
+	box-shadow:1px 1px 2px 0px #aaa inset,
+	            -1px -1px 2px 0px #aaa inset;
+}
