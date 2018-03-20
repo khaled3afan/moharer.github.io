@@ -1,0 +1,172 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+		<link rel="stylesheet" href="template/css/normalize.css" />
+
+		<link rel="stylesheet" href="template/css/font-awesome.min.css" />
+
+		<link rel="stylesheet" href="template/css/main.css" />
+
+		<style>
+ *{
+  box-sizing:border-box;
+  padding:0px;
+  margin:0px;
+ }
+ button, button:hover, button:active{
+  outline:none;
+  border:0px;
+ }
+body{
+ direction:rtl;
+ text-align:right;
+ position:relative;
+}
+section{
+ margin:20px auto;
+ border:1px solid #555; 
+ width:98%;
+}
+ul{
+ width:100%;
+ list-style-type:none;
+ margin:auto;
+ 
+}
+ul li{
+ width:100%;
+ background:#bbb;
+ padding:10px;
+ display:block;
+ border-bottom:1px solid #555;
+}
+ul div{
+ background:#eee;
+ color:#777;
+ padding:5px 10px 10px;
+ border-right:5px solid #C54A4A;
+ font-size:20px;
+ display:none;
+}
+ul div h3{
+ color:tomato;
+}
+ul div code{
+ direction:ltr;
+ text-align:left;
+ background:#111;
+ color:#3E94CE;
+ width:90%;
+ display:block;
+ padding:5px;
+ border-radius:5px;
+ overflow-y:auto;
+ max-height:50px;
+ border-left:5px solid #EC6D66;
+}
+ul div blockquote{
+ border-right:5px solid #aaa;
+ margin-right:20px;
+ background:#ddd;
+ padding:5px;
+}
+ul div span{
+ padding:5px;
+ border:1px solid #aaa;
+ color:#fff;
+ background:#C15A5A;
+}
+ul div span.support{
+ 
+ background:#248250;
+}
+
+
+.editor{
+ display:none;
+ position:fixed;
+ width:20%;
+ height:100vh;
+ left:0;
+ top:0;
+ background:#D34D4D;
+}
+.editor button{
+ display:block;
+ text-align:center;
+ color:#fff;
+ width:100%;
+ padding:15px;
+ border-bottom:1px solid #fff;
+ background:#666;
+}
+.editor button:nth-of-type(odd){
+  background:#5B94CE;
+}
+
+		</style>
+	</head>
+	<body>
+		<section contenteditable="contenteditable">
+			<ul>
+				<li>
+					<h2>(المصفوفات) arrays</h2>
+				</li>
+				<div>
+					<h3>تعريف مختصر</h3>
+					<p>تستخدم المصفوفات لتخزين قيم متعدده داخل متغير واحد</p>
+					<h3>طريقة الاستخدام</h3>
+					<code>var cars = ["Saab", "Volvo", "BMW"];</code>
+					<h3>اين يمكنك الاستفاده منها في مشروعك ؟</h3>
+					<blockquote>لا اله الا الله</blockquote>
+					<h3>دعم المتصفحات</h3>
+					<span class="support">chrome</span>
+					<span>FireFox</span>
+					<span class="support">EI</span>
+					<span>Safari</span>
+				</div>
+				<li>
+					<h2>سي اس اس</h2>
+				</li>
+				<div>
+					<p>لا اله الا الله محمد صلى الله عليه وسلم تسليما كثيرا  رب اغفر لي ولوالدي رب ارحمهما كما ربياني صغيرا</p>
+				</div>
+			</ul>
+			<!-- <p data-height="400" data-theme-id="0" data-slug-hash="vJxKyP" data-default-tab="result" data-editeable="true"data-user="khaled3afan" data-embed-version="3" class="codepen">See the Pen <a href="https://codepen.io/khaled3afan/pen/vJxKyP/">Fancy text inputs</a> by Regan Ryan (<a href="https://codepen.io/khaled3afan">@regan-ryan</a>) on <a href="https://codepen.io">CodePen</a>.</p> <script async ="async" src="https://assets.codepen.io/assets/embed/ei.js"></script> -->
+		</section>
+		<div class="editor">
+			<button onclick="copy()">Copy text</button>
+			<button onclick="cut()">cut text</button>
+			<button onclick="bold()">bold text</button>
+			<button onclick="itlic()">itlic text</button>
+			<button onclick="header()">header text</button>
+			<button onclick="h1()">Copy text</button>
+			<button onclick="h2()">Copy text</button>
+		</div>
+		<div id="main">done</div>
+		<script src="template/js/jquery.js"></script>
+		<script src="template/js/main.js"></script>
+		<script>
+			
+// code for IE7+, Firefox, Chrome, Opera, Safari 
+var main =document.getElementById('main');
+main.onclick= function(){
+	alert('done');
+var xmlhttp=new XMLHttpRequest(); 
+ 
+xmlhttp.open("GET","io.hsoub.com/rss.xml",false); 
+xmlhttp.send(null); 
+xmlDoc=xmlhttp.responseXML; 
+main.write("<ol id='content' data-role='listview' data-inset='true'>"); 
+var x= xmlDoc.getElementsByTagName("title"); 
+for (i=0;i<x.length;i++) { 
+main.write("<li><a href='"+x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue+"'><img src='"+x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue+"'/><h2>"+x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue+"</h2><p>"+x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue+"</p></a></li>"); }
+ main.write("</ol>");
+ 
+ }
+		</script>
+	</body>
+</html>
